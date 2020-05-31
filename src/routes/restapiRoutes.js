@@ -1,5 +1,6 @@
 import { addNewContact, 
-        getContacts
+        getContacts,
+        getContactWithId
 } from '../controllers/restapiControllers'
 
 const routes = (app) => {
@@ -16,6 +17,8 @@ const routes = (app) => {
         .post(addNewContact)
 
     app.route('/contact/:contactID')
+        .get(getContactWithId)
+    
         .put((req, res) => 
         res.send('PUT request successful'))
         
