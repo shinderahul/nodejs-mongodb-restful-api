@@ -1,7 +1,8 @@
 import { addNewContact, 
         getContacts,
         getContactWithId,
-        updateContact
+        updateContact,
+        deleteContact
 } from '../controllers/restapiControllers'
 
 const routes = (app) => {
@@ -22,8 +23,7 @@ const routes = (app) => {
     
         .put(updateContact)
         
-        .delete((req, res) => 
-        res.send('DELETE  request successful'))
+        .delete(deleteContact)
 }
 
 export default routes;
