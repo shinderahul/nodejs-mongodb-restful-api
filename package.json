@@ -1,0 +1,36 @@
+{
+  "name": "nodejs-mongodb-restful-api",
+  "version": "1.0.0",
+  "description": "We are creating RESTful APIs using node.js and mongoDB. It just the backend code using nodejs. We request our services through Postman.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js --exec  babel-node -e js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinderahul/nodejs-mongodb-restful-api.git"
+  },
+  "keywords": [
+    "NodeJs",
+    "MongoDB",
+    "Postman"
+  ],
+  "author": "Rahul Shinde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shinderahul/nodejs-mongodb-restful-api/issues"
+  },
+  "homepage": "https://github.com/shinderahul/nodejs-mongodb-restful-api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.8",
+    "mongoose": "^5.9.16",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
