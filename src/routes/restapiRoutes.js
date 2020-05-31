@@ -1,4 +1,6 @@
-import { addNewContact } from '../controllers/restapiControllers'
+import { addNewContact, 
+        getContacts
+} from '../controllers/restapiControllers'
 
 const routes = (app) => {
     app.route('/contact')
@@ -6,9 +8,10 @@ const routes = (app) => {
             // middleware
             console.log(`Request from: ${req.originalUrl}`)
             console.log(`Request type: ${req.method}`)
-        }, (req, res, next) => {
-            res.send('GET request successful')
-        })
+
+            // I have forgot to add this so next() middleware take to next function from its current function.
+            next();
+        }, getContacts)
 
         .post(addNewContact)
 
